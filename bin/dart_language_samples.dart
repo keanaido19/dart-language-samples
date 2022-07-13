@@ -161,7 +161,11 @@ void main() {
   }
 
   // elementsList.forEach(printTing);
-  elementsList.forEach((pie) => print(pie));
+  for (var pie in elementsList) {
+    print(pie);
+  }
+
+  print(elementsList[0]);
 
   var hi = 'Hi 🇩🇰';
   print(hi);
