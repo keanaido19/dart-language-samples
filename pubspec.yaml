@@ -5,3 +5,4 @@ environment:
 analyzer:
   enable-experiment:
     - non-nullable
+dependencies: {characters: ^1.2.1}

@@ -1,5 +1,5 @@
 import 'dart:math';
-import '';
+import 'package:characters/characters.dart';
 
 var name = 'Voyager I';
 var year = 1977;
@@ -151,8 +151,22 @@ void main() {
 
   var elementsList = [for (var element in elements) element];
 
-  var lol = {for (var element in elementsList) elementsList.indexOf(element): element};
+  var lol = {
+    for (var element in elementsList) elementsList.indexOf(element): element
+  };
   print(lol);
+
+  void printTing(String element, {int x = 1}) {
+    print(element + '$x');
+  }
+
+  // elementsList.forEach(printTing);
+  elementsList.forEach((pie) => print(pie));
+
+  var hi = 'Hi 🇩🇰';
+  print(hi);
+  print('The end of the string: ${hi.substring(hi.length - 1)}');
+  print('The last character: ${hi.characters.last}\n');
 
   flybyObjects.where((name) => name.contains('turn')).forEach((print));
 
@@ -161,4 +175,10 @@ void main() {
 
   var voyager3 = Spacecraft.unlaunched('Voyager III');
   voyager3.describe();
+
+  Function makeAdder(int addBy) {
+    return (int i) => i >= 1000 ? addBy + i : makeAdder(addBy)(i + addBy);
+  }
+
+  print(makeAdder(10)(1));
 }
