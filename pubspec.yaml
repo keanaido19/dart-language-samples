@@ -1,0 +1,7 @@
+name:
+  "dart_language_samples"
+environment:
+  sdk: '>=2.13.0 <3.0.0'
+analyzer:
+  enable-experiment:
+    - non-nullable
